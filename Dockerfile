@@ -1,5 +1,5 @@
 # First stage: compile TypeScript files
-FROM node:16 AS build
+FROM node:18-alpine AS build
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm install -g typescript
 
 RUN tsc
 # Second stage: run Node.js application using compiled JavaScript files
-FROM node:16
+FROM node:18-alpine
 
 WORKDIR /app
 
