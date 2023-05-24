@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "pretty": true,
+    "sourceMap": true,
+    // "skipLibCheck": true,
+    "removeComments": true,
+    "target": "es6",
+    "outDir": "./dist/src",
+    "baseUrl": "./src",
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+
+  "include": ["src/**/*.ts", "abi/**/*.json", "abi/*.json"],
+  "exclude": ["node_modules", "dist", "delegation-contracts"]
+}
+/*{
+    "compilerOptions": {
+      "lib": ["es5", "es6", "es2020"],
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "rootDirs": ["src"],
+      "types": ["node"],
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "dist"
+    },
+    "exclude": ["delegation-contracts", "node-modules"]
+  }*/
+
+/*
+  {
+    "compilerOptions": {
+      "rootDirs": ["src"],
+      "outDir": "dist",
+      "lib": ["es2020", "es5", "es6"],
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "types": ["node"],
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "resolveJsonModule": true
+    },
+    "exclude": ["delegation-contracts", "node-modules"],
+  
+  }
+  */
