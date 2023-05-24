@@ -13,7 +13,11 @@ mongoose.connect(process.env.MONGO_URI!, {
   useUnifiedTopology: true,
 } as ConnectOptions);
 
-const server: FastifyInstance = fastify({ logger: true });
+const server: FastifyInstance = fastify({
+  trustProxy: true,
+  ignoreTrailingSlash: true,
+  disableRequestLogging: true,
+});
 
 // API route to fetch categories
 server.get("/categories", async (_request, reply) => {
