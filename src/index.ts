@@ -106,7 +106,7 @@ server.post<{ Body: CreateReservationBody }>(
     }
   }
 );
-const port = Number(process.env.PORT) || 3000;
+const port = parseInt(process.env.PORT) || 3000;
 
 // Start the server
 const start = async () => {
