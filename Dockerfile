@@ -22,4 +22,4 @@ COPY --from=build /app/dist ./dist
 
 RUN npm install 
 
-CMD [ "node", "dist/src/delegate.js" ]
+CMD [ "node", "dist/src/index.js" ]
