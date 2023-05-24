@@ -106,11 +106,12 @@ server.post<{ Body: CreateReservationBody }>(
     }
   }
 );
-const PORT: number = Number(process.env.PORT) || 3000;
+const port = Number(process.env.PORT) || 3000;
+
 // Start the server
 const start = async () => {
   try {
-    await server.listen({ port: PORT });
+    await server.listen({ port: port });
     server.log.info(`Server listening on ${server.server.address()}`);
   } catch (error) {
     server.log.error(error);
