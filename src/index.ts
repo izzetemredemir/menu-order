@@ -111,7 +111,7 @@ const port = Number(process.env.PORT) || 3000;
 // Start the server
 const start = async () => {
   try {
-    await server.listen({ port: port });
+    await server.listen({ port: port, host: "0.0.0.0" });
     server.log.info(`Server listening on ${server.server.address()}`);
   } catch (error) {
     server.log.error(error);
