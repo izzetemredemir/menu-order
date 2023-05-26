@@ -8,7 +8,7 @@ Here are the available API endpoints:
 2. **GET /foods/:id**
    This endpoint retrieves the list of foods belonging to a certain category. It expects the ID of the food category as the `id` parameter.
 
-### `GET /foods`
+2.1 **GET /foods**
 
 This endpoint returns a list of foods based on the given list of food ids. Food ids are sent as a comma-separated string within the query parameters.
 
