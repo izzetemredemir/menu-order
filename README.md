@@ -30,8 +30,6 @@ This endpoint returns a list of foods based on the given list of food ids. Food 
    }
    ```
 
-````
-
 4. **POST /reservations**
    This endpoint is used to create a reservation. It expects a JSON body containing the first name, last name, phone number, email address, note, and reservation time. Optional fields: firstName, lastName, phoneNumber, email, note, reservationTime.
 
@@ -48,4 +46,7 @@ This endpoint returns a list of foods based on the given list of food ids. Food 
      "persons": 3
    }
    ```
-````
+
+```
+
+```
