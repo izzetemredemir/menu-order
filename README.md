@@ -12,8 +12,6 @@ Here are the available API endpoints:
 
 This endpoint returns a list of foods based on the given list of food ids. Food ids are sent as a comma-separated string within the query parameters.
 
-#### Request
-
 ##### Query Parameters
 
 - `ids`: Comma-separated list of the food ids to be searched. For example: `ids=5eb3d668b31de5d588f4292a,5eb3d668b31de5d588f4292b`
