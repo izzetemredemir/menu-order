@@ -7,6 +7,7 @@ export interface IReservation extends Document {
   email?: string;
   note?: string;
   reservationTime?: number;
+  persons?: number;
 }
 
 const ReservationSchema: Schema = new Schema({
@@ -16,6 +17,7 @@ const ReservationSchema: Schema = new Schema({
   email: { type: String },
   note: { type: String },
   reservationTime: { type: Number },
+  persons: { type: Number },
 });
 
 export default mongoose.model<IReservation>("Reservation", ReservationSchema);

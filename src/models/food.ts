@@ -6,6 +6,7 @@ interface IFood extends Document {
   description: string;
   price: number;
   category: ICategory["_id"];
+  image: { type: String; required: false };
 }
 
 const FoodSchema: Schema = new Schema({

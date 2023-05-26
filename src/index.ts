@@ -52,8 +52,34 @@ server.get<{ Params: FoodParams }>("/foods/:id", async (request, reply) => {
   }
 });
 
+server.get("/foods", async (request, reply) => {
+  const ids = request.query["ids"].split(",");
+
+  try {
+    const uniqueIds = [...new Set(ids)]; // Remove duplicates from the ids array
+    const foodsData = await Food.find({
+      _id: { $in: uniqueIds },
+    });
+
+    let foods = [];
+
+    // For each id in the original ids array, find the corresponding food and add it to the foods array
+    ids.forEach((id) => {
+      const food = foodsData.find((food) => String(food._id) === id);
+      if (food) {
+        foods.push(food);
+      }
+    });
+
+    reply.send(foods);
+  } catch (err) {
+    reply.code(500).send({ error: "Database error." });
+  }
+});
+
 // Define the schema for the order request body
 interface OrderRequestBody {
+  paymentInfo: Object;
   foodIds: string[];
 }
 
@@ -79,6 +105,7 @@ interface CreateReservationBody {
   email?: string;
   note?: string;
   reservationTime?: number;
+  persons?: number;
 }
 // API route for creating a reservation
 server.post<{ Body: CreateReservationBody }>(

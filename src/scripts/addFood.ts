@@ -12,13 +12,15 @@ async function addFood(
   name: string,
   description: string,
   price: number,
-  categoryID: string
+  categoryID: string,
+  image: string
 ) {
   const newFood = new Food({
     name: name,
     description: description,
     price: price,
     category: categoryID,
+    image: image,
   });
 
   try {
@@ -62,7 +64,13 @@ async function addFoodsToCategory(categoryName: string) {
   ];
 
   for (const food of foods) {
-    await addFood(food.name, food.description, food.price, category._id);
+    await addFood(
+      food.name,
+      food.description,
+      food.price,
+      category._id,
+      food.image
+    );
   }
 }
 
