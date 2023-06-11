@@ -1,4 +1,4 @@
-A TypeScript-built web application using Fastify and MongoDB for seamless online food ordering, payments, and table reservations.
+A TypeScript-built web application using Fastify and MongoDB for  online food ordering, payments, and table reservations.
 ## API Endpoints
 
 Here are the available API endpoints:
